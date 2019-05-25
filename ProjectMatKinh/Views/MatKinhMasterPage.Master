@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MatKinhMasterPage.master.cs" Inherits="ProjectMatKinh.Views.MatKinhMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <title>Shop Mat Kinh</title>
+    <!-- Bootstrap css -->
+    <link href="../Assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Fontawesome css -->
+    <link href="../Assets/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+    <form id="form1" runat="server">
+            <div class="header_top_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="top_header_left">
+                            <div class="selector">
+                                <select class="language_drop" name="countries" id="countries" style="width:300px;">
+                                  <option value='en' data-image="../Assets/img/icon/flag-en.png" data-imagecss="flag en" data-title="English">English</option>
+                                  <option value='vn' data-image="../Assets/img/icon/flag-vn.png" data-imagecss="flag vn" data-title="Vietnamese">Vietnamese</option>                                  
+                                </select>
+                            </div>                            
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+                                <span class="input-group-btn">
+                                <button class="btn btn-secondary" type="button"><i class="icon-magnifier"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="top_header_middle">
+                            <a href="#"><i class="fa fa-phone"></i> Call Us: <span>+84 987 654 321</span></a>
+                            <a href="#"><i class="fa fa-envelope"></i> Email: <span>support@yourdomain.com</span></a>
+                            <img src="img/logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="top_right_header">
+                            <ul class="header_social">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                            </ul>
+                            <ul class="top_right">
+                                <li class="user"><a href="#"><i class="icon-user icons"></i></a></li>
+                                <li class="cart"><a href="#"><i class="icon-handbag icons"></i></a></li>
+                                <li class="h_price">
+                                    <select class="selectpicker">
+                                        <option>$0.00</option>
+                                        <option>$0.00</option>
+                                        <option>$0.00</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="main" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+    <!-- Jquery -->
+    <script type="text/javascript" src="../Assets/js/jquery-3.0.0.js"></script>
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="../Assets/js/bootstrap.js"></script>
+    </form>
+</body>
+</html>
